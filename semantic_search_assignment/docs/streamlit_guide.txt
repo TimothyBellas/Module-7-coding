@@ -1,0 +1,9 @@
+Streamlit is a Python library for making interactive web apps from scripts. Widgets such as st.text_input, st.button, and st.slider let visitors control what appears on the page without writing frontend JavaScript.
+
+Streamlit runs the entire Python script from top to bottom again when someone interacts with a widget. This rerun model means interface elements can react to new values using normal Python conditionals.
+
+Regular variables are recreated during reruns, so st.session_state keeps information such as a quiz score, login token, or conversation history between user interactions. Initialize keys before reading them.
+
+Streamlit layouts include st.sidebar for controls, st.columns for side-by-side information, st.tabs for different views, and st.expander for content readers can open on demand.
+
+Use st.cache_data for data that can be recomputed and st.cache_resource for long-lived resources such as a database client. A form can collect multiple widget values and submit them together instead of rerunning on each change.

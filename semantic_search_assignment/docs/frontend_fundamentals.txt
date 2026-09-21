@@ -1,0 +1,7 @@
+HTML gives a web page structure with elements such as headings, forms, buttons, and lists. Semantic elements help browsers and assistive technology understand the role of each part of the page.
+
+CSS controls a page's appearance, including color, spacing, and layout. Flexbox helps align items in one direction, while CSS Grid arranges items into rows and columns.
+
+JavaScript can find page elements through the DOM, listen for events, and update content after a click or keystroke. The input event is useful for search boxes that filter visible items as someone types.
+
+The fetch API makes HTTP requests from the browser. An app can show a loading message before a response arrives, check whether the response succeeded, then display data or a helpful error message.

@@ -1,0 +1,9 @@
+SQLite stores relational data in tables made of rows and columns. A primary key identifies a row, while a foreign key can connect a student record to a related enrollment record.
+
+SQL joins combine related rows from different tables. An INNER JOIN keeps matching rows, whereas a LEFT JOIN keeps every row from the left table even when the right table has no match.
+
+SQLAlchemy models describe database tables as Python classes. A Session groups database operations, and commit persists changes made by inserts, updates, or deletes.
+
+When filtering or sorting a large table, indexes can speed up lookups on indexed columns. They also use disk space and make writes more expensive, so choose indexes for actual query patterns.
+
+A transaction keeps a group of database changes together. If one step fails before commit, a rollback prevents a partly completed operation from leaving the stored data inconsistent.

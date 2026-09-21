@@ -1,0 +1,7 @@
+An embedding is a list of numbers that represents text in a vector space. Similar sentences tend to have nearby vectors, allowing semantic search to find related concepts even when they use different words.
+
+ChromaDB stores documents, embeddings, IDs, and metadata in a collection. A PersistentClient writes the collection to disk so an app can search the same indexed notes after restarting.
+
+To search with ChromaDB, call collection.query with query_texts and n_results. Returned distances indicate how far each matching chunk is from the query; smaller distances mean closer matches.
+
+Source file names stored in Chroma metadata enable filtering with the query where parameter. A multiselect can pass a list of permitted filenames using the $in operator, restricting results before similarity ranking.

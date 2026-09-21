@@ -1,0 +1,4 @@
+.venv/
+search_db/
+__pycache__/
+*.py[cod]

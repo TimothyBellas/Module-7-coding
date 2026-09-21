@@ -1,0 +1,9 @@
+FastAPI is a modern Python web framework for building APIs. An endpoint connects an HTTP method and URL path to a Python function, such as GET /students for listing students or POST /students for creating one.
+
+FastAPI uses Pydantic models for automatic data validation. A request body that violates field types or constraints receives a 422 validation response before the endpoint tries to save invalid data.
+
+FastAPI generates interactive documentation at /docs with Swagger UI and at /redoc with ReDoc. The documentation stays in sync with endpoint signatures, type hints, and Pydantic schemas.
+
+An authentication flow can accept login credentials, return a JWT access token, and use a dependency to check a Bearer token on protected routes. A missing or invalid token should receive a 401 response.
+
+FastAPI can use async def for operations that await network or database work. While one request awaits I/O, the server can handle another request instead of tying up that worker the entire time.
