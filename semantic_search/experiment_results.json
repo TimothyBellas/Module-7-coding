@@ -1,0 +1,355 @@
+{
+  "model": "all-MiniLM-L6-v2",
+  "metric": "cosine",
+  "unit": "unique source files in the top 3 chunks",
+  "runs": [
+    {
+      "index": {
+        "documents": 8,
+        "chunks": 137,
+        "chunk_size": 200,
+        "overlap": 50
+      },
+      "evaluation": {
+        "n_results": 3,
+        "distance_threshold": null,
+        "queries": [
+          {
+            "query": "How do Python virtual environments isolate project dependencies?",
+            "relevant_sources": [
+              "python-fundamentals.txt"
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "top_results": [
+              {
+                "source": "python-fundamentals.txt",
+                "chunk_index": 11,
+                "score": 0.5109,
+                "relevant": true,
+                "text_preview": "and serializes JSON. The datetime module handles dates and times.\n\nVirtual environments (venv) isolate project dependenc"
+              },
+              {
+                "source": "python-fundamentals.txt",
+                "chunk_index": 12,
+                "score": 0.423,
+                "relevant": true,
+                "text_preview": "its own environment to avoid version conflicts. Requirements are tracked in a requirements.txt file and installed with p"
+              },
+              {
+                "source": "python-fundamentals.txt",
+                "chunk_index": 6,
+                "score": 0.3329,
+                "relevant": true,
+                "text_preview": "d from other functions.\n\nPython supports multiple programming paradigms including procedural, object-oriented, and funct"
+              }
+            ]
+          },
+          {
+            "query": "How do API endpoints validate request data and report HTTP errors?",
+            "relevant_sources": [
+              "fastapi.txt",
+              "rest-apis.txt"
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "top_results": [
+              {
+                "source": "rest-apis.txt",
+                "chunk_index": 1,
+                "score": 0.5258,
+                "relevant": true,
+                "text_preview": "ESTful APIs communicate over HTTP and treat everything as a resource identified by a URL. REST is stateless \u2014 each reque"
+              },
+              {
+                "source": "rest-apis.txt",
+                "chunk_index": 0,
+                "score": 0.5127,
+                "relevant": true,
+                "text_preview": "REST APIs \u2014 Design, HTTP, and Best Practices\n\nREST (Representational State Transfer) is an architectural style for desig"
+              },
+              {
+                "source": "fastapi.txt",
+                "chunk_index": 1,
+                "score": 0.5071,
+                "relevant": true,
+                "text_preview": "or the web layer and Pydantic for data validation. FastAPI automatically generates interactive API documentation at /doc"
+              }
+            ]
+          },
+          {
+            "query": "How do SQLAlchemy database tools and FastAPI dependencies work together?",
+            "relevant_sources": [
+              "sql-databases.txt",
+              "fastapi.txt"
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "top_results": [
+              {
+                "source": "sql-databases.txt",
+                "chunk_index": 16,
+                "score": 0.614,
+                "relevant": true,
+                "text_preview": "Python classes to database tables, allowing you to work with objects instead of raw SQL. Alembic handles database migrat"
+              },
+              {
+                "source": "sql-databases.txt",
+                "chunk_index": 15,
+                "score": 0.6009,
+                "relevant": true,
+                "text_preview": "SQLAlchemy is Python's most popular database toolkit. The Core layer provides a SQL expression language that maps closel"
+              },
+              {
+                "source": "fastapi.txt",
+                "chunk_index": 8,
+                "score": 0.5541,
+                "relevant": true,
+                "text_preview": "ed with Depends(). Common uses include database session management, authentication, and shared configuration. Dependenci"
+              }
+            ]
+          },
+          {
+            "query": "How does Streamlit rerun the script and retain values after widgets change?",
+            "relevant_sources": [
+              "streamlit.txt"
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "top_results": [
+              {
+                "source": "streamlit.txt",
+                "chunk_index": 1,
+                "score": 0.5715,
+                "relevant": true,
+                "text_preview": "ML, CSS, or JavaScript. A Streamlit app is just a Python script \u2014 every time a user interacts with a widget, the entire "
+              },
+              {
+                "source": "streamlit.txt",
+                "chunk_index": 2,
+                "score": 0.5655,
+                "relevant": true,
+                "text_preview": "tom and the UI updates.\n\nThe execution model is Streamlit's most important concept. Because the script re-runs on every "
+              },
+              {
+                "source": "streamlit.txt",
+                "chunk_index": 5,
+                "score": 0.5347,
+                "relevant": true,
+                "text_preview": "to avoid KeyError: if \"count\" not in st.session_state: st.session_state.count = 0. Session state is per-user and per-bro"
+              }
+            ]
+          },
+          {
+            "query": "How can vector retrieval help an LLM avoid hallucinations?",
+            "relevant_sources": [
+              "embeddings-and-vectors.txt",
+              "llms-and-ai.txt"
+            ],
+            "precision": 1.0,
+            "recall": 0.5,
+            "top_results": [
+              {
+                "source": "llms-and-ai.txt",
+                "chunk_index": 7,
+                "score": 0.4093,
+                "relevant": true,
+                "text_preview": "text that is plausible-sounding but factually incorrect. LLMs have no reliable knowledge of what they don't know; they p"
+              },
+              {
+                "source": "llms-and-ai.txt",
+                "chunk_index": 8,
+                "score": 0.4052,
+                "relevant": true,
+                "text_preview": "lly fit the context. Retrieval-Augmented Generation (RAG) mitigates hallucination by grounding answers in retrieved docu"
+              },
+              {
+                "source": "llms-and-ai.txt",
+                "chunk_index": 3,
+                "score": 0.3231,
+                "relevant": true,
+                "text_preview": "of modern LLMs. The key mechanism is self-attention: the model learns which parts of the input are relevant to each othe"
+              }
+            ]
+          }
+        ],
+        "average_precision": 1.0,
+        "average_recall": 0.9
+      }
+    },
+    {
+      "index": {
+        "documents": 8,
+        "chunks": 49,
+        "chunk_size": 500,
+        "overlap": 50
+      },
+      "evaluation": {
+        "n_results": 3,
+        "distance_threshold": null,
+        "queries": [
+          {
+            "query": "How do Python virtual environments isolate project dependencies?",
+            "relevant_sources": [
+              "python-fundamentals.txt"
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "top_results": [
+              {
+                "source": "python-fundamentals.txt",
+                "chunk_index": 3,
+                "score": 0.4905,
+                "relevant": true,
+                "text_preview": "follow the same pattern. Generator expressions use parentheses instead of brackets and produce values lazily.\n\nPython's "
+              },
+              {
+                "source": "python-fundamentals.txt",
+                "chunk_index": 4,
+                "score": 0.4787,
+                "relevant": true,
+                "text_preview": "its own environment to avoid version conflicts. Requirements are tracked in a requirements.txt file and installed with p"
+              },
+              {
+                "source": "python-fundamentals.txt",
+                "chunk_index": 0,
+                "score": 0.3033,
+                "relevant": true,
+                "text_preview": "Python Fundamentals and Core Concepts\n\nPython is a high-level, interpreted programming language known for its clear synt"
+              }
+            ]
+          },
+          {
+            "query": "How do API endpoints validate request data and report HTTP errors?",
+            "relevant_sources": [
+              "fastapi.txt",
+              "rest-apis.txt"
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "top_results": [
+              {
+                "source": "rest-apis.txt",
+                "chunk_index": 0,
+                "score": 0.5198,
+                "relevant": true,
+                "text_preview": "REST APIs \u2014 Design, HTTP, and Best Practices\n\nREST (Representational State Transfer) is an architectural style for desig"
+              },
+              {
+                "source": "fastapi.txt",
+                "chunk_index": 0,
+                "score": 0.4727,
+                "relevant": true,
+                "text_preview": "FastAPI \u2014 Building Modern Python APIs\n\nFastAPI is a modern, high-performance Python web framework for building APIs. It "
+              },
+              {
+                "source": "rest-apis.txt",
+                "chunk_index": 1,
+                "score": 0.4675,
+                "relevant": true,
+                "text_preview": "effects. POST creates a new resource. PUT replaces a resource entirely. PATCH partially updates a resource. DELETE remov"
+              }
+            ]
+          },
+          {
+            "query": "How do SQLAlchemy database tools and FastAPI dependencies work together?",
+            "relevant_sources": [
+              "sql-databases.txt",
+              "fastapi.txt"
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "top_results": [
+              {
+                "source": "sql-databases.txt",
+                "chunk_index": 5,
+                "score": 0.6281,
+                "relevant": true,
+                "text_preview": "SQLAlchemy is Python's most popular database toolkit. The Core layer provides a SQL expression language that maps closel"
+              },
+              {
+                "source": "fastapi.txt",
+                "chunk_index": 2,
+                "score": 0.4749,
+                "relevant": true,
+                "text_preview": "d in the URL pattern and as function arguments: @app.get(\"/users/{user_id}\"). Query parameters are function arguments wi"
+              },
+              {
+                "source": "sql-databases.txt",
+                "chunk_index": 4,
+                "score": 0.462,
+                "relevant": true,
+                "text_preview": ". It is ideal for development, testing, and small applications. SQLite databases are stored as a single file and are dir"
+              }
+            ]
+          },
+          {
+            "query": "How does Streamlit rerun the script and retain values after widgets change?",
+            "relevant_sources": [
+              "streamlit.txt"
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "top_results": [
+              {
+                "source": "streamlit.txt",
+                "chunk_index": 1,
+                "score": 0.6397,
+                "relevant": true,
+                "text_preview": "explicitly managed using st.session_state. Variables not stored in session_state are reset on each run. This differs fro"
+              },
+              {
+                "source": "streamlit.txt",
+                "chunk_index": 0,
+                "score": 0.5429,
+                "relevant": true,
+                "text_preview": "Streamlit \u2014 Building Data Apps in Pure Python\n\nStreamlit is an open-source Python library for building interactive web a"
+              },
+              {
+                "source": "streamlit.txt",
+                "chunk_index": 4,
+                "score": 0.324,
+                "relevant": true,
+                "text_preview": "mance. @st.cache_data caches the return value of a function based on its arguments. @st.cache_resource caches a shared r"
+              }
+            ]
+          },
+          {
+            "query": "How can vector retrieval help an LLM avoid hallucinations?",
+            "relevant_sources": [
+              "embeddings-and-vectors.txt",
+              "llms-and-ai.txt"
+            ],
+            "precision": 1.0,
+            "recall": 0.5,
+            "top_results": [
+              {
+                "source": "llms-and-ai.txt",
+                "chunk_index": 2,
+                "score": 0.4139,
+                "relevant": true,
+                "text_preview": "00-token context window. Inputs and outputs both count toward the context limit.\n\nHallucination is a well-known failure "
+              },
+              {
+                "source": "llms-and-ai.txt",
+                "chunk_index": 1,
+                "score": 0.3011,
+                "relevant": true,
+                "text_preview": "of modern LLMs. The key mechanism is self-attention: the model learns which parts of the input are relevant to each othe"
+              },
+              {
+                "source": "llms-and-ai.txt",
+                "chunk_index": 0,
+                "score": 0.2593,
+                "relevant": true,
+                "text_preview": "Large Language Models \u2014 How They Work and How to Use Them\n\nLarge Language Models (LLMs) are neural networks trained on m"
+              }
+            ]
+          }
+        ],
+        "average_precision": 1.0,
+        "average_recall": 0.9
+      }
+    }
+  ]
+}
