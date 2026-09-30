@@ -1,0 +1,7 @@
+FastAPI is a Python framework for building web APIs. An endpoint combines a URL path with an HTTP method. For example, GET /tasks can retrieve tasks, while POST /tasks can create a task. CRUD means create, read, update, and delete.
+
+FastAPI uses Pydantic models to validate request data. A request schema describes expected fields and types. Field constraints can set a minimum number or a maximum string length. Invalid request data normally produces an HTTP 422 validation response.
+
+FastAPI generates interactive API documentation at /docs and alternative documentation at /redoc. Run a development application whose file is main.py and whose FastAPI instance is named app with python -m uvicorn main:app --reload.
+
+HTTP status codes describe the result of a request. A 200 response commonly indicates success, 201 indicates a created resource, 401 indicates missing or invalid authentication, and 404 indicates a resource was not found. An API can raise HTTPException to return a deliberate error status and message.

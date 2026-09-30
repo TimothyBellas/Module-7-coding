@@ -1,0 +1,7 @@
+Streamlit runs a Python script from top to bottom when a user interacts with a widget. This rerun model makes it straightforward to rebuild the page, but ordinary local variables do not preserve their values between separate script executions.
+
+st.session_state is Streamlit's container for session values. It stores values across reruns within a user's Streamlit session. It is useful for preserving a quiz score, a current question number, login information, and chat history, so users retain their progress when the script reruns. Initialize a key only if it does not already exist so a rerun does not reset the saved value.
+
+st.form groups multiple input widgets into a form. Widget changes inside the form are submitted together when the user presses st.form_submit_button. This helps an add-task form collect a title and priority before processing them together.
+
+st.cache_data caches the results of data-returning functions, such as loading a dataset or fetching API data. Reusing a cached result can reduce repeated work. A function's clear method or st.cache_data.clear can clear the corresponding cache, but clearing cached data does not automatically reset widget values in st.session_state.

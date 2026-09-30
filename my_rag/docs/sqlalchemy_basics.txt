@@ -1,0 +1,7 @@
+SQLAlchemy is a Python library for working with relational databases. Its object-relational mapper maps Python model classes to database tables. An instance of a mapped class represents a row, and mapped attributes represent columns.
+
+A primary key uniquely identifies a database row. A foreign key references a key in another table and helps represent relationships. In a school database, a student's class_id can reference the primary key of a classes table.
+
+A SQLAlchemy session manages work with database records. Add a new model instance to the session and call commit to persist the transaction. Refresh can reload database-generated values. Rollback cancels pending changes after a failed transaction.
+
+SQL joins combine rows from related tables using a matching condition. An inner join returns matching rows from both tables. A left join keeps all rows from the left table and uses null values when the right table has no match.

@@ -1,0 +1,7 @@
+An embedding represents text as a numerical vector. Texts with similar meanings often have vectors near one another. Semantic search uses this relationship to find relevant text even when a question and a document use different words.
+
+The all-MiniLM-L6-v2 sentence embedding model maps text into 384-dimensional vectors. A semantic search system must embed documents and user questions with the same model so their vectors can be compared in the same space.
+
+Cosine similarity measures the angle between two vectors. For normalized text embeddings, a higher cosine similarity indicates a closer semantic match. ChromaDB's cosine distance is one minus cosine similarity, so a lower cosine distance indicates a closer match. A similarity or distance is not a calibrated probability that a document answers a question.
+
+ChromaDB stores embeddings together with text, unique IDs, and metadata. PersistentClient saves the database to a specified folder so its data survives process restarts. A collection query returns nearest chunks, and source metadata helps show where each retrieved chunk came from.
