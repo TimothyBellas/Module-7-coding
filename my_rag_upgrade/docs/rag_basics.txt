@@ -1,0 +1,7 @@
+Retrieval-augmented generation, or RAG, combines document search with a language model. The pipeline receives a question, embeds the query, retrieves relevant chunks from a vector database, assembles a prompt, and asks the language model to generate an answer using those chunks.
+
+Chunking divides a document into smaller pieces for retrieval. Paragraph chunking splits on blank lines so each paragraph becomes a chunk. A paragraph can preserve one coherent idea, although very long paragraphs may need additional splitting in a larger application.
+
+A RAG prompt contains system instructions, retrieved context, and the user's question. The system instructions should require answers based on the supplied context and ask for source citations. Context delimiters help mark document text as reference material rather than instructions to obey.
+
+A nearest-neighbor search always returns the closest available chunks when the collection has enough records. Those chunks might still be irrelevant to an outside-scope question. A grounded assistant should state when the context does not contain the answer rather than fill the gap with unsupported facts.

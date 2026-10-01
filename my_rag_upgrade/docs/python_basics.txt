@@ -1,0 +1,7 @@
+Python functions group reusable instructions under a name. Parameters receive values passed by the caller, and a return statement sends a result back to the caller. A function that reaches the end without a return statement returns None.
+
+A Python dictionary stores key-value pairs. Keys are unique, and values can be strings, numbers, lists, or other objects. A list stores an ordered sequence of items and can contain repeated values.
+
+A Python virtual environment isolates the packages installed for one project. On Windows, create it with python -m venv .venv and activate it in PowerShell with .\.venv\Scripts\Activate.ps1. Install project dependencies with python -m pip install -r requirements.txt.
+
+Exception handling uses try and except blocks to handle expected failures without stopping the entire program. For example, a file-reading function can catch FileNotFoundError and show a useful message when a required file is missing.

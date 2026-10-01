@@ -1,0 +1,25 @@
+{
+  "distance_threshold": 0.7,
+  "queries": [
+    {
+      "query_type": "Out-of-scope",
+      "question": "What is the best recipe for chocolate brownies?",
+      "response": {
+        "answer": "I don't know. No relevant information was found in the documents.",
+        "sources": [],
+        "confidence": "low",
+        "chunks_retrieved": 0
+      }
+    },
+    {
+      "query_type": "Ambiguous",
+      "question": "How do I make it remember things?",
+      "response": {
+        "answer": "I don't know. No relevant information was found in the documents.",
+        "sources": [],
+        "confidence": "low",
+        "chunks_retrieved": 0
+      }
+    }
+  ]
+}
