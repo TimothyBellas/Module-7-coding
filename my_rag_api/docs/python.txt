@@ -1,0 +1,3 @@
+Python is a programming language used for web APIs, automation, and data analysis. A variable stores a value, and a function groups reusable instructions. Python uses indentation to define blocks of code.
+
+A virtual environment isolates a project's Python packages. Create one with python -m venv .venv. Install dependencies using that environment's Python executable and python -m pip install -r requirements.txt. Dependencies from one virtual environment do not automatically become available in another.

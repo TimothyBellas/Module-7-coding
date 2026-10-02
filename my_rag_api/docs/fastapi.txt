@@ -1,0 +1,3 @@
+FastAPI is a Python framework for building APIs. An endpoint combines a URL path with an HTTP method. GET requests retrieve information. POST requests commonly submit data or create resources. A route decorator such as @app.get('/health') connects a function to an endpoint.
+
+FastAPI uses Pydantic models to validate request bodies. Missing required fields and invalid field values can produce an HTTP 422 validation response. Swagger UI at /docs lets you inspect endpoints and send requests to test them.

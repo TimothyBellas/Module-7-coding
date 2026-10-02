@@ -1,0 +1,3 @@
+This project's RAG reliability rules filter retrieved chunks using a configurable distance threshold. Only chunks strictly below the threshold are sent to the generation model. If no chunks qualify, the API returns a no-relevant-information answer with low confidence.
+
+Retrieval confidence is high when the best distance is below 0.5, medium when it is at least 0.5 and below 1.0, and low when it is at least 1.0. These confidence labels are heuristics about retrieval similarity, not measured probabilities that an answer is correct. Health checks report whether application dependencies are accessible.

@@ -1,0 +1,7 @@
+# Direct dependencies pinned to the versions used for verification.
+fastapi==0.142.2
+uvicorn==0.54.0
+chromadb==1.5.9
+httpx==0.28.1
+pydantic==2.13.5
+pydantic-settings==2.15.0

@@ -1,0 +1,3 @@
+RAG stands for Retrieval-Augmented Generation. A RAG system retrieves relevant information from a document collection and supplies it as context to a language model. The model uses that context to answer the user's question.
+
+The RAG pipeline consists of user question input, query embedding, vector database retrieval, prompt assembly, and language model generation. A grounded prompt tells the model to answer from the supplied context and cite its sources. If the documents cannot answer a question, the assistant should say it does not know.

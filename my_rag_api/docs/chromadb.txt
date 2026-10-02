@@ -1,0 +1,3 @@
+ChromaDB is a vector database that can store document chunks, embeddings, and metadata. Embeddings represent text as numeric vectors. A similarity query compares the question's vector to stored vectors and retrieves nearby chunks.
+
+A persistent ChromaDB client stores data on disk so it can be reused after the application restarts. Source filenames can be stored as metadata for citations. The embedding model used to index documents must also be used to embed questions. With cosine distance, lower distances indicate more similar vector directions.
