@@ -1,0 +1,5 @@
+ChromaDB stores document chunks, embedding vectors, identifiers, and metadata so the API can retrieve relevant content for a question. Each chunk in this API records its source filename, paragraph number, and part number.
+
+The API uses a persistent ChromaDB client. In the Docker container, the database directory is /app/chroma_data. A named Docker volume mounted at that directory can keep the database after the container is removed. A volume is separate from the image and is not created by excluding chroma_data in .dockerignore.
+
+Ingestion updates the collection with the current documents. The API generates embeddings before writing to the collection and removes chunks whose identifiers no longer appear in the loaded document collection. GET /stats reports the number of distinct source documents and stored chunks.

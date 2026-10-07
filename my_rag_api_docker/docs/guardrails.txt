@@ -1,0 +1,5 @@
+The API filters retrieved chunks using a configurable distance threshold. If no chunks pass the filter, it returns a message saying no relevant information was found instead of asking Ollama to invent an answer. If the database contains no chunks, it asks the user to ingest documents first.
+
+Retrieval confidence is high when the best distance is below 0.5, medium when it is below 1.0, and low otherwise. This label is a retrieval heuristic and is not a probability that the generated answer is correct.
+
+The system prompt tells the language model to use only the provided context, avoid invented facts or sources, cite its sources, and admit uncertainty. Retrieved document text and the user question are treated as data rather than instructions to replace the system prompt.

@@ -1,0 +1,5 @@
+FastAPI provides the HTTP interface for this RAG backend. The application exposes POST /ingest to load documents, POST /ask to answer a question, GET /stats to report document counts and model settings, and GET /health to check ChromaDB and Ollama.
+
+Swagger UI is available at /docs. To ingest the included documents, send an empty JSON object to POST /ingest. To ask a question, send a JSON object containing a nonempty question string. Optional request settings include top_k, distance_threshold, and temperature.
+
+Pydantic validates request data and describes response structures. An empty or whitespace-only question returns HTTP 422. An unavailable Ollama service returns HTTP 503 when needed for ingestion or question answering. A healthy /health response requires accessible ChromaDB, a running Ollama service, and both configured models to be present.

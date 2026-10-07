@@ -1,0 +1,5 @@
+Retrieval-augmented generation (RAG) combines document retrieval with a language model. When a user asks a question, the application retrieves relevant text from its document collection and puts that text in the model's prompt. The model uses the supplied context to produce an answer.
+
+This API has an ingestion stage and a question-answering stage. POST /ingest loads text files, splits them into chunks, obtains embeddings from Ollama, and stores the chunks in ChromaDB. POST /ask embeds the question, retrieves relevant chunks, and sends their content with the question to Ollama. The response includes the answer, sources, and a retrieval confidence level.
+
+The system prompt instructs the model to answer only from the supplied context, cite numbered source labels, and say it does not know when the documents do not contain the answer. These instructions guide generation; they do not guarantee that every generated answer is correct.

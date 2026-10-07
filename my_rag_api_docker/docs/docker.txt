@@ -1,0 +1,5 @@
+A Dockerfile describes how to build an application image. This project starts with python:3.11-slim, installs system dependencies and Python packages, copies the application and documents, and starts Uvicorn on port 8000.
+
+The requirements file is copied and installed before the application code. This ordering lets Docker reuse the dependency installation layer when only application code changes. The --no-cache-dir option prevents pip from retaining its own download cache inside the image; Docker's build layer cache is a separate mechanism.
+
+The server binds to 0.0.0.0 inside the container so it can accept forwarded connections. The command docker run -p 8000:8000 my-rag-api maps host port 8000 to container port 8000. The /docs page can then be opened at http://localhost:8000/docs. On Docker Desktop, host.docker.internal provides a way for the container to connect to a service running on the host computer.

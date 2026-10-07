@@ -1,0 +1,5 @@
+An embedding is a numeric vector representing a piece of text. A semantic search system compares the embedding of a question with embeddings of document chunks to find related content.
+
+This API uses the Ollama model nomic-embed-text to produce embeddings for both documents and questions. It supplies those vectors directly to ChromaDB. The collection uses cosine distance, where a smaller distance indicates greater similarity. Document and query vectors must come from a compatible embedding model.
+
+The default query retrieves up to three chunks. A chunk is included in the prompt only when its distance is strictly below the configured distance threshold. The default threshold is 1.0.

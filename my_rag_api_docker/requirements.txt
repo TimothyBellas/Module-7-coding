@@ -1,0 +1,7 @@
+# Direct dependencies for the uploaded my_rag_api.py and its Uvicorn server.
+chromadb==1.5.9
+fastapi==0.142.4
+httpx==0.28.1
+pydantic==2.13.5
+pydantic-settings==2.15.0
+uvicorn==0.54.0
