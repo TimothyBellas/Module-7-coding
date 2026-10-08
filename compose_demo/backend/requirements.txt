@@ -1,0 +1,8 @@
+# Chroma 1.0.12 requires this specific FastAPI version.
+fastapi==0.115.9
+uvicorn==0.34.2
+chromadb==1.0.12
+requests==2.32.4
+pydantic==2.11.5
+# Keep Chroma's telemetry client compatible even when telemetry is disabled.
+posthog==3.25.0

@@ -1,0 +1,7 @@
+Docker Compose starts and manages multiple containers from a YAML configuration file. This project has a FastAPI backend service and an Ollama service. The backend is built from a Dockerfile, while Ollama uses the ollama/ollama image.
+
+Containers in a Docker Compose project can reach each other using service names. The FastAPI backend reaches Ollama at http://ollama:11434. The hostname localhost inside the backend container refers to the backend container itself.
+
+Named Docker volumes store data independently of a container's writable layer. The chroma_data volume stores ChromaDB at /app/chroma_data. The ollama_data volume stores Ollama models at /root/.ollama. Docker compose down followed by docker compose up preserves these named volumes unless volumes are explicitly removed.
+
+Retrieval augmented generation, or RAG, retrieves relevant document chunks before asking a language model to answer a question. ChromaDB stores the chunks and their embeddings. Ollama generates an answer using the retrieved context and instructions to cite sources.
