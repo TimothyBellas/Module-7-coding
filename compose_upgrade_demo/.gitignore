@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+backend/chroma_data/
+verification-results.txt
+config-verification-results.txt
+.pytest_cache/
+.env
+.env.*
+!.env.example
